@@ -2,9 +2,9 @@
 // add the latitude and longitude for your location one lines 6 and 7
 // move on to adding your data requests on line 22
 function weatherBalloon() {
-  var key = '';
-  var lat = '';
-  var lon = '';
+  var key = '17087e94ed71803f318f6473460fddd0';
+  var lat = '43.6591';
+  var lon = '-70.2568';
   fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&appid=' + key)  
   .then(function(resp) { return resp.json() }) // Convert data to json
   .then(function(data) {
@@ -19,7 +19,48 @@ function weatherBalloon() {
 // display weather information
 function drawWeather( d ) {
 
-  // add your specfic weather requests here
+// current day
+$('.current-temp h1').html( convertTemp(d.current.feels_like) + '&deg;');
+$('.current-temp h2').html( convertTemp(d.daily[0].temp.max) );
+$('.current-temp h3').html( convertTemp(d.daily[0].temp.min) );
+
+// current conditions
+$('.rain p').html(d.current.pop);
+$('.humidity p').html( (d.current.humidity) + '&percnt;');
+$('.uv p').html(d.current.uvi);
+$('.wind p').html( (d.current.wind_speed) + ' mph');
+$('.visibility p').html(d.current.visibility);
+$('.air p').html(d.current.pressure);
+
+// day 1
+$('.day1 .icon').html( printGraphic(d.daily[1].weather[0].description) );
+$('.day1 .temp').html( convertTemp(d.daily[1].temp.day) + '&deg;');
+$('.day1 .hum').html( (d.daily[1].humidity) + '&percnt;');
+
+// day 2
+$('.day2 .icon').html( printGraphic(d.daily[2].weather[0].description) );
+$('.day2 .temp').html( convertTemp(d.daily[2].temp.day) + '&deg;');
+$('.day2 .hum').html( (d.daily[2].humidity) + '&percnt;');
+
+// day 3
+$('.day3 .icon').html( printGraphic(d.daily[3].weather[0].description) );
+$('.day3 .temp').html( convertTemp(d.daily[3].temp.day) + '&deg;');
+$('.day3 .hum').html( (d.daily[3].humidity) + '&percnt;');
+
+// day 4
+$('.day4 .icon').html( printGraphic(d.daily[4].weather[0].description) );
+$('.day4 .temp').html( convertTemp(d.daily[4].temp.day) + '&deg;');
+$('.day4 .hum').html( (d.daily[4].humidity) + '&percnt;');
+
+// day 5
+$('.day5 .icon').html( printGraphic(d.daily[5].weather[0].description) );
+$('.day5 .temp').html( convertTemp(d.daily[5].temp.day) + '&deg;');
+$('.day5 .hum').html( (d.daily[5].humidity) + '&percnt;');
+
+// day 6
+$('.day6 .icon').html( printGraphic(d.daily[6].weather[0].description) );
+$('.day6 .temp').html( convertTemp(d.daily[6].temp.day) + '&deg;');
+$('.day6 .hum').html( (d.daily[6].humidity) + '&percnt;');
 
 }
 
@@ -134,13 +175,13 @@ function displayDay(n){
   var d = new Date();
   var weekday = new Array();
 
-  weekday[0] = "Sun";
-  weekday[1] = "Mon";
-  weekday[2] = "Tue";
-  weekday[3] = "Wed";
-  weekday[4] = "Thu";
-  weekday[5] = "Fri";
-  weekday[6] = "Sun";
+  weekday[0] = "Su";
+  weekday[1] = "Mo";
+  weekday[2] = "Tu";
+  weekday[3] = "We";
+  weekday[4] = "Th";
+  weekday[5] = "Fr";
+  weekday[6] = "Sa";
 
   var dispDay = d.getDay() + n;
 
