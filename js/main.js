@@ -25,7 +25,7 @@ $('.current-temp h2').html( convertTemp(d.daily[0].temp.max) );
 $('.current-temp h3').html( convertTemp(d.daily[0].temp.min) );
 
 // current conditions
-$('.rain p').html(d.current.pop);
+$('.rain p').html( (d.daily[0].rain) + '&percnt;');
 $('.humidity p').html( (d.current.humidity) + '&percnt;');
 $('.uv p').html(d.current.uvi);
 $('.wind p').html( (d.current.wind_speed) + ' mph');

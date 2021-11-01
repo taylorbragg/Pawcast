@@ -103,9 +103,8 @@ button:hover{
 
 
 /* MAIN STYLES */
-
 .top-design {
-  height: 5rem;
+  height: 12rem;
 }
 
 .top-design img {
@@ -120,7 +119,9 @@ button:hover{
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: .5fr 2fr;
-  margin: 4rem;
+  margin-left: 3rem;
+  margin-right: 2rem;
+  padding-bottom: 2rem;
 }
 
 .location .fas {
@@ -156,7 +157,8 @@ button:hover{
   grid-template-rows: .2fr .7fr;
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
-  margin: 4rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
 .current-temp h2, h3, p {
@@ -194,7 +196,9 @@ button:hover{
   place-items: center;
   font-size: .5rem;
   color: #fff;
-  margin: 4rem;
+  padding-bottom: 1rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
 .conditions .fas {
@@ -258,7 +262,6 @@ button:hover{
   /* grid placement */
   grid-column: 3;
   font-size: .8rem;
-  padding-left: 2.2rem;
   background-color: #fed5a4;
   border-radius: 50px;
   font-weight: 800;
@@ -286,7 +289,6 @@ button:hover{
   /* grid placement */
   grid-column: 3;
   font-size: .8rem;
-  padding-left: 3.8rem;
   background-color: #fed5a4;
   border-radius: 50px;
   font-weight: 800;
@@ -314,7 +316,6 @@ button:hover{
   /* grid placement */
   grid-column: 3;
   font-size: .8rem;
-  padding-left: 3rem;
   background-color: #fed5a4;
   border-radius: 50px;
   font-weight: 800;
@@ -342,7 +343,6 @@ button:hover{
   /* grid placement */
   grid-column: 3;
   font-size: .8rem;
-  padding-left: 3.2rem;
   background-color: #fed5a4;
   border-radius: 50px;
   font-weight: 800;
@@ -370,7 +370,6 @@ button:hover{
   /* grid placement */
   grid-column: 3;
   font-size: .8rem;
-  padding-left: 2.8rem;
   background-color: #fed5a4;
   border-radius: 50px;
   font-weight: 800;
@@ -388,7 +387,8 @@ button:hover{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  margin: 4rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
 .forecast .row {
@@ -432,12 +432,13 @@ button:hover{
 /* footer */
 .footer {
   text-align: center;
+  padding-top: 4rem;
 }
 
 .footer h1 {
   color: #ffbd58;
   font-size: 1rem;
-  padding-top: 3rem;
+  padding-top: 2rem;
 }
 
 .footer img {
